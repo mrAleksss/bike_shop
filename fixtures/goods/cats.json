@@ -1,0 +1,58 @@
+[
+    {
+        "model": "goods.categories",
+        "pk": 1,
+        "fields": {
+            "name": "Гірські велосипеди",
+            "slug": "girski-velosypedy"
+        }
+    },
+    {
+        "model": "goods.categories",
+        "pk": 2,
+        "fields": {
+            "name": "Дорожні велосипеди",
+            "slug": "dorozhni-velosypedy"
+        }
+    },
+    {
+        "model": "goods.categories",
+        "pk": 3,
+        "fields": {
+            "name": "Всі товари",
+            "slug": "vsi-tovari"
+        }
+    },
+    {
+        "model": "goods.categories",
+        "pk": 4,
+        "fields": {
+            "name": "Підліткові велосипеди",
+            "slug": "pidlitkovi-velosipedi"
+        }
+    },
+    {
+        "model": "goods.categories",
+        "pk": 5,
+        "fields": {
+            "name": "Дитячі велосипеди",
+            "slug": "dityachi-velosipedi"
+        }
+    },
+    {
+        "model": "goods.categories",
+        "pk": 6,
+        "fields": {
+            "name": "Жіночі велосипеди",
+            "slug": "zhinochi-velosipedi"
+        }
+    },
+    {
+        "model": "goods.categories",
+        "pk": 7,
+        "fields": {
+            "name": "Електровелосипеди",
+            "slug": "elektrovelosipedi"
+        }
+    }
+]
