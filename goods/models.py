@@ -1,5 +1,6 @@
 from django.db import models
 from django.core.validators import MinValueValidator
+from django.urls import reverse
 
 
 class Categories(models.Model):
@@ -39,6 +40,9 @@ class Bicycle(models.Model):
     def __str__(self):
         return f'{self.brand} | {self.series}'
 
+    def get_absolute_url(self):
+        return reverse('catalog:product', kwargs={'product_slug': self.slug})
+    
     def display_id(self):
         return f'{self.id:05}'
     
