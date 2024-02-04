@@ -36,11 +36,11 @@
                         <li class="nav-item dropdown ">
                             <a class="nav-link dropdown-toggle text-white" href="#" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
-                                Информация
+                                Інформація
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item  text-white" href="#">Доставка и оплата</a></li>
-                                <li><a class="dropdown-item  text-white" href="#">Контактная информация</a></li>
+                                <li><a class="dropdown-item  text-white" href="#">Доставка та оплата</a></li>
+                                <li><a class="dropdown-item  text-white" href="#">Контактна інформація</a></li>
                                 <li><a class="dropdown-item  text-white" href="{% url "main:about" %}">Про нас</a></li>
                             </ul>
                         </li>
@@ -49,7 +49,7 @@
                         </li>
                         {% if not user.is_authenticated %}
                             <li class="nav-item">
-                                <a class="nav-link  text-white" href="{% url "users:login" %}">Войти</a>
+                                <a class="nav-link  text-white" href="{% url "users:login" %}">Увійти</a>
                             </li>
                         {% else %}
                         <li class="nav-item dropdown ">
@@ -58,23 +58,23 @@
                                 Мой профиль
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item  text-white" href="carts/cart.html">Корзина</a></li>
-                                <li><a class="dropdown-item  text-white" href="{% url "users:profile" %}">Личный кабинет</a>
+                                <li><a class="dropdown-item  text-white" href="{% url "users:users_cart" %}">Корзина</a></li>
+                                <li><a class="dropdown-item  text-white" href="{% url "users:profile" %}">Особистий Кабінет</a>
                                 </li>
                                 {% if user.is_admin or user.is_staff %}
-                                <li><a class="dropdown-item  text-white" href="{% url "admin:index" %}">Админ панель</a></li>
+                                <li><a class="dropdown-item  text-white" href="{% url "admin:index" %}">Адмін Панель</a></li>
                                 {% endif %}
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item  text-white" href="{% url "users:logout" %}">Выйти</a></li>
+                                <li><a class="dropdown-item  text-white" href="{% url "users:logout" %}">Вийти</a></li>
                             </ul>
                         </li>
                         {% endif %}
                     </ul>
                     <form class="d-flex" role="search" action="{% url "catalog:search" %}" method="get">
                         <input class="form-control me-2" type="search" name="q" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success text-white" type="submit">Поиск</button>
+                        <button class="btn btn-outline-success text-white" type="submit">Пошук</button>
                     </form>
                 </div>
             </div>
@@ -124,6 +124,20 @@
     <script src="{% static "deps/js/jquery/jquery-3.7.0.min.js" %}"></script>
     <script src="{% static "deps/js/jquery-ajax.js" %}"></script>
     <script src="{% static "deps/js/bootstrap/bootstrap.bundle.min.js" %}"></script>
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        (function(){
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/65bfc3330ff6374032c93a3f/1hlqh50kb';
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
 </body>
 
 </html>
+

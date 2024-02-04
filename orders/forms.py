@@ -17,16 +17,15 @@ class CreateOrderForm(forms.Form):
             ("1", True),
         ])
     
-    # change 12 on 10 after migrations make
     def clean_phone(self):
         data = self.cleaned_data['phone']
 
         if not data.isdigit():
             raise forms.ValidationError('Номер телефону має містити лише цифри')
         
-        pattern = re.compile(r'^\d{12}$')
+        pattern = re.compile(r'^\d{10}$')
         if not pattern.match(data):
-            raise forms.ValidationError('Невірний формат номера, має бути 12 цифр')
+            raise forms.ValidationError('Невірний формат номера, має бути 10 цифр')
         
         return data
 

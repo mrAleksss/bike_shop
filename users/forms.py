@@ -4,11 +4,15 @@ from users.models import User
 
 
 class UserLoginForm(AuthenticationForm):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        self.fields.pop('username')
     class Meta:
         model = User
-        fields = ['username', 'password']
+        fields = ['email', 'password']
 
-    username = forms.CharField()
+    email = forms.CharField()
     password = forms.CharField()
 
     # username = forms.CharField(label="Ім'я користувача", widget=forms.TextInput(attrs={"autofocus": True,
